@@ -1,9 +1,8 @@
 pipeline {
     agent { 
-        docker {
-            image 'node:18.17.1-alpine3.18'
-            args '-p 9000:9000'
-        }
+      node {
+            label 'my-docker-agent-node-alpine'
+            }
       }
     triggers {
         pollSCM '* * * * *'
