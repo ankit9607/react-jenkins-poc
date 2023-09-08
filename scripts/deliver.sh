@@ -7,8 +7,9 @@ echo 'correctly bundles React in production mode and optimizes the build for'
 echo 'the best performance.'
 set -x
 npm run build
-npm install serve
-serve -s build -l 3000
+# npm install serve
+# serve -s build -l 3000
+npm start
 set +x
 
 # echo 'The following "npm" command runs your Node.js/React application in'
