@@ -1,24 +1,24 @@
 pipeline {
-    agent { 
+    agent {
         docker {
-            image 'node:18.17.1-alpine3.18'
-            args '-p 3000:3000'
+            image 'node:18.17.1-alpine3.18' 
+            args '-p 3000:3000' 
         }
-      }
+    }
     triggers {
         pollSCM '* * * * *'
     }
     stages {
-        stage('Build') {
+        stage('Build') { 
             steps {
-                sh 'npm install'
+                sh 'npm install' 
             }
         }
         stage('Test') {
             steps {
                 echo "Testing.."
                 sh '''
-                echo "doing test stuff..
+                echo "doing test stuff.."
                 '''
             }
         }
